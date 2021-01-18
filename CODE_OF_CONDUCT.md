@@ -1,4 +1,4 @@
-# KrabbShell's Code Of Contact
+# KrabbShell's Code Of Conduct
 - Be friendly and Patient to others even if they are beginners.
 - Please don't:
   - Post sexual and/or violent content
