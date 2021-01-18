@@ -5,3 +5,6 @@ KrabbShell is a smart, open source Shell developed by Cis Osil.
 <div class="cl">
 <img src="./docs/assets/krabb_logo.jpg" style="height: 200px">
 </div>
+
+## Building
+To build krabb please go to `CONTRIBUTING.MD`

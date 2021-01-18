@@ -30,7 +30,8 @@ int krabbsh_src(char **args)
 
     fp = fopen(args[1], "r");
         if (fp == NULL)
-            exit(EXIT_FAILURE);
+            printf(RED "krabbsh: error source file not found\n" NORMAL);
+            return 1;
         
     while ((read = getline(&line, &len, fp)) != -1) {
         args = krabbsh_split_line(line);

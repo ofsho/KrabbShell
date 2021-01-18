@@ -15,6 +15,7 @@
   #include "execute.c"
   #include "otherFunctions.c"
   #include "loop.c"
+  #include "history.c"
   #include "includes.h"
 #endif
 
@@ -103,6 +104,12 @@ int krabbsh_werror(char **args)
         printf(BLUE"FIX:  "NORMAL"     `return value`");
     }
     return 1;
+}
+
+// HISTORY
+int krabbsh_history(char **args){
+  history_main();
+  return 1;
 }
 
 // COUNTDOWN

@@ -65,9 +65,11 @@ void krabbsh_loop(void)
     }
     line = krabbsh_read_line();
     args = krabbsh_split_line(line);
-    
+
     if (bl == false){
-        if (strchr(line, '#') == NULL){
+        if (strchr(line, '#') == NULL)
+        {
+            write_to_history(*args);
             status = krabbsh_execute(args);
         }
     }

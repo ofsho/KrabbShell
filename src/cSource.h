@@ -5,6 +5,7 @@
 */
 #ifdef _main__
     #include "includes.h"
+    #include "history.c"
     #include "builtins.c"
     #include "launch.c"
     #include "execute.c"

@@ -1,21 +1,21 @@
 #ifndef bui
-    #ifndef _main__
-        #ifndef launch
-            #ifndef execute
-              #ifndef loop
-                #define other
-              #endif
-            #endif
-        #endif
-    #endif
+#ifndef _main__
+#ifndef launch
+#ifndef execute
+#ifndef loop
+#define other
+#endif
+#endif
+#endif
+#endif
 #endif
 
 #ifdef other
-  #include "builtins.c"
-  #include "execute.c"
-  #include "launch.c"
-  #include "loop.c"
-  #include "includes.h"
+#include "builtins.c"
+#include "execute.c"
+#include "launch.c"
+#include "loop.c"
+#include "includes.h"
 #endif
 
 /*
@@ -35,30 +35,37 @@ char *krabbsh_read_line(void)
   char *buffer = malloc(sizeof(char) * bufsize);
   int c;
 
-  if (!buffer) {
+  if (!buffer)
+  {
     fprintf(stderr, RED "krabbsh: allocation error\n" NORMAL);
     errwrning = 'e';
     exit(EXIT_FAILURE);
   }
 
-  while (1) {
+  while (1)
+  {
     // Read a character
     c = getchar();
 
     // If we hit EOF, replace it with a null character and return.
-    if (c == EOF || c == '\n') {
+    if (c == EOF || c == '\n')
+    {
       buffer[position] = '\0';
       return buffer;
-    } else {
+    }
+    else
+    {
       buffer[position] = c;
     }
     position++;
 
     // If we have exceeded the buffer, reallocate.
-    if (position >= bufsize) {
+    if (position >= bufsize)
+    {
       bufsize += KRABBSH_RL_BUFSIZE;
       buffer = realloc(buffer, bufsize);
-      if (!buffer) {
+      if (!buffer)
+      {
         fprintf(stderr, RED "krabbsh: allocation error\n" NORMAL);
         errwrning = 'e';
         exit(EXIT_FAILURE);
@@ -71,24 +78,28 @@ char *krabbsh_read_line(void)
 char **krabbsh_split_line(char *line)
 {
   int bufsize = KRABBSH_TOK_BUFSIZE, position = 0;
-  char **tokens = malloc(bufsize * sizeof(char*));
+  char **tokens = malloc(bufsize * sizeof(char *));
   char *token;
 
-  if (!tokens) {
+  if (!tokens)
+  {
     fprintf(stderr, RED "krabbsh: allocation error\n" NORMAL);
     errwrning = 'e';
     exit(EXIT_FAILURE);
   }
 
   token = strtok(line, KRABBSH_TOK_DELIM);
-  while (token != NULL) {
+  while (token != NULL)
+  {
     tokens[position] = token;
     position++;
 
-    if (position >= bufsize) {
+    if (position >= bufsize)
+    {
       bufsize += KRABBSH_TOK_BUFSIZE;
-      tokens = realloc(tokens, bufsize * sizeof(char*));
-      if (!tokens) {
+      tokens = realloc(tokens, bufsize * sizeof(char *));
+      if (!tokens)
+      {
         fprintf(stderr, RED "krabbsh: allocation error\n" NORMAL);
         errwrning = 'e';
         exit(EXIT_FAILURE);

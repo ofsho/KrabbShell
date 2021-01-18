@@ -29,11 +29,13 @@ int krabbsh_launch(char **args)
     // Child process
     if (execvp(args[0], args) == -1) {
       perror("krabbsh");
+      errwrning = 'e';
     }
     exit(EXIT_FAILURE);
   } else if (pid < 0) {
     // Error forking
     perror("krabbsh");
+    errwrning = 'e';
   } else {
     // Parent process
     do {

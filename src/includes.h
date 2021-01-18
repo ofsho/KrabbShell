@@ -5,6 +5,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
+#include <pwd.h>
 #include <readline/history.h>
 #include <readline/readline.h>
 #include <signal.h>
@@ -13,6 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
@@ -58,6 +60,7 @@ int krabbsh_dir(char **args);
 int krabbsh_werror(char **args);
 int krabbsh_countdown(char **args);
 int krabbsh_src(char **args);
+int krabbsh_history(char **args);
 
 // builtins to string
 char *builtin_str[] = {
@@ -69,6 +72,7 @@ char *builtin_str[] = {
   "werror",
   "countdown",
   "src",
+  "history",
 };
 
 // builtin functions
@@ -81,6 +85,7 @@ int (*builtin_func[]) (char **) = {
   &krabbsh_werror,
   &krabbsh_countdown,
   &krabbsh_src,
+  &krabbsh_history,
 };
 
 // number of builtins
