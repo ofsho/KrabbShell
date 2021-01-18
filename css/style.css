@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.toplinks {
+    position: fixed;
+    background-color: #a1caffa1;
+    width: 100%;
+    height: 30px;
+    padding-top: 0.5%;
+    text-align: center;
+}
+
+a {
+    color: #3C2FFF;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+a:visited {
+    color: #3C2FFF;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+a:hover {
+    color: #816efac0;
+}
+
+.krabbLogo {
+    width: 450px;
+    float: left;
+    padding-right: 40px;
+}
+
+.home {
+    position: absolute;
+    margin-top: 100px;
+    width: 60%;
+}
+
+.main {
+    margin-left: 25%;
+}
