@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/krabb_logo.webp" type="image/x-icon">
+    <title>KrabbShell - Documentation</title>
+    <link rel="stylesheet" href="../javascript/styles/vs2015.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <script src="../javascript/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="toplinks">
+        <a class="lnk" href="https://ofsho.github.io/KrabbShell/docs/intro">documentation</a>
+        <a class="lnk" href="https://ofsho.github.io/KrabbShell/samples">samples</a>
+        <a class="lnk" href="https://github.com/ofsho/KrabbShell/wiki/Function-Index-(standard-library-and-builtins-only)">
+            builtins refrence</a>
+        <a class="lnk" href="https://ofsho.github.io/KrabbShell/refrence">refrence</a>
+        <a class="lnk" href="https://ofsho.github.io/KrabbShell/styleguide">style guide</a>
+        <a class="lnk" href="https://ofsho.github.io/KrabbShell/package/packageindex">package index</a>
+        <a class="lnk" href="https://ofsho.github.io/KrabbShell/docs/errors">error list</a>
+        <a class="lnk" href="https://www.github.com/ofsho/krabbshell">source</a>
+        <a class="lnk" href="https://github.com/ofsho/KrabbShell/releases/tag/0.0.1">install</a>
+    </div>
+    <div class="main">
+        <br><br>
+        <div class="left">
+            <h3>Intro</h3>
+            <a href="https://ofsho.github.io/KrabbShell/docs/intro">Installation and Hello World</a>
+            <br/>
+            <a href="https://ofsho.github.io/KrabbShell/docs/exit">Exiting the Shell</a>
+            <br/>
+            <a href="https://ofsho.github.io/KrabbShell/docs/history">History</a>
+            <br/>
+            <a href="https://ofsho.github.io/KrabbShell/docs/scripts">Scripts</a>
+        </div>
+        <div class="right">
+            <h1>Exiting the Shell</h1>
+            <h2>Why do I need to exit</h2>
+            <p>If you want to close your shell you would need to use the exit command or the
+            escape command, using ctrl+c will work but it returns and error, and ctrl+c does
+            not work in <a href="https://ofsho.github.io/KrabbShell/docs/scripts">scripts</a>.
+            So in Scripts you would need to use exit or escape.</p>
+            <p>Unlike ctrl+c, exit and escape return with success.</p>
+            <h2>Exit</h2>
+            <h3>In the Shell</h3>
+            <p>To exit the shell you would need to use the exit command or the escape command (or ctrl+c)</p>
+            <p>To use the command, write (in the shell) this command:</p>
+            <pre><code class="powershell">exit</code></pre>
+            <p>This should be your output:</p>
+            <pre><code class="plaintext"><span class="green">{} -> </span>exit
+<span class="black">CLOSING</span></code></pre>
+            <pre>if this isn't your output, you probably have an error.
+To get help make an <a href="https://github.com/ofsho/KrabbShell/issues">issue</a> or find your error
+message in the <a href="https://ofsho.github.io/KrabbShell/docs/errors">error list</a>.</pre>
+            <h3>In a Script</h3>
+            <p>To learn about scripts, go to the
+                <a href="https://ofsho.github.io/KrabbShell/docs/scripts">scripts</a>
+            page in the documentation.</p>
+            <p>Using the exit command in a script will close the krabb shell after executing the script. It will not
+            break the script's process. To end the script while it is running, use the escape command documented in the
+            Escape section.</p>
+            <p>To use the exit command in a script add to it this:</p>
+            <pre><code class="bash"># ...
+exit
+# ...</code></pre>
+            <p>After you finish your script you can run it with the src command documented it the
+            <a href="https://ofsho.github.io/KrabbShell/docs/scripts">Scripts</a> page.</p>
+            <h2>Escape</h2>
+            <h3>In the Shell</h3>
+            <p>Escape is similar to the exit command and will exit the shell when executed (another alternative
+            is ctrl+c but ctrl+c returns an error)</p>
+            <p>To use it in the shell you need to run this command:</p>
+            <pre><code class="powershell">escape</code></pre>
+            <p>This should be your output:</p>
+            <pre><code class="plaintext"><span class="green">{} -> </span>exit
+<span class="black">CLOSING</span></code></pre>
+            <pre>if this isn't your output, you probably have an error.
+To get help make an <a href="https://github.com/ofsho/KrabbShell/issues">issue</a> or find your error
+message in the <a href="https://ofsho.github.io/KrabbShell/docs/errors">error list</a>.</pre>
+            <h3>In a Script</h3>
+            <p>Unlinke the exit command, using the escape command will end your script and will
+            not execute any code after it was called.</p>
+            <p>If you would like to use escape in a script you would need to write it like
+            this:</p>
+            <pre><code class="bash"># ...
+escape
+# ... this code would not execute ...</code></pre>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,44 +1,66 @@
 body {
-    text-align: center;
-    background-color: #a1caffa1;
+    background-color: #bfdbffa1;
+    margin: 0;
     overflow-x: hidden;
-}
-
-p, h1, h2, h3, h4 {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4 {
-    color: #ff912a;
-    font-weight: 900;
+.toplinks {
+    position: fixed;
+    background-color: #a1caffa1;
+    width: 100%;
+    height: 30px;
+    padding-top: 0.5%;
+    text-align: center;
+}
+
+.left {
+    float: left;
+    width: 300px;
+    padding-top: 75px;
+    padding-left: 30px;
+    background-color: #fce6ff;
+    position: fixed;
+    height: 100%;
+}
+
+.left h3 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.left a {
+    color: #4d4d4d;
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+.right {
+    float: right;
+    width: 80%;
 }
 
 h1 {
-    font-size: 120px;
-    text-decoration: underline #ffffff;
+    font-size: 60px;
+    color: #a73bff;
 }
 
 h2 {
-    font-size: 90px;
-}
-
-h3 {
-    font-size: 60px;
-}
-
-h4 {
     font-size: 40px;
-    color: #800020;
-}
-
-p {
-    color: #fa7a25;
-    font-size: 20px;
+    color: #e479ff;
 }
 
 a {
     color: #3C2FFF;
     text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+a.lnk {
+    padding-right: 20px;
 }
 
 a:visited {
@@ -50,6 +72,32 @@ a:hover {
     color: #816efac0;
 }
 
-code {
-    font-size: 20px;
+pre, code {
+    font-family: Consolas, Menlo, 'Lucida Console', 'Courier New', Courier, monospace;
+}
+
+pre, code, p {
+    width: 76.1%;
+}
+
+.green {
+    color: #6BC34C;
+}
+
+.cyan {
+    color: #6AC2CF;
+}
+
+.blokursor {
+    background-color: #cfcfcf;
+}
+
+.notetxt {
+    font-weight: 900;
+    color: red;
+    font-size: larger;
+}
+
+.black {
+    color: black;
 }

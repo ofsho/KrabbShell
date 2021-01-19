@@ -1,3 +1,7 @@
+:root {
+    background-color: #fce6ff;
+}
+
 body {
     margin: 0;
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -35,10 +39,23 @@ a:hover {
 
 .home {
     position: absolute;
-    margin-top: 100px;
+    background-color: #ffffff;
+    padding-left: 20%;
+    padding-top: 50px;
+    margin-left: -250px;
+    margin-top: 39px;
     width: 60%;
 }
 
 .main {
     margin-left: 25%;
+}
+
+.ttm {
+    margin-left: 150px;
+}
+
+pre {
+    text-align: left;
+    width: 600px;
 }
