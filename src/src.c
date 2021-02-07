@@ -58,6 +58,7 @@ int krabbsh_src(char **args)
                 exit(0);
             }
             krabbsh_execute(args);
+        }
     }
 
     fclose(fp);
