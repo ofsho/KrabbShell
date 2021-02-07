@@ -101,3 +101,15 @@ pre, code, p {
 .black {
     color: black;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6AC2CF;
+}

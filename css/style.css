@@ -59,3 +59,15 @@ pre {
     text-align: left;
     width: 600px;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6AC2CF;
+}
