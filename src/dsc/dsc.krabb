@@ -34,6 +34,16 @@ GRA='\u001b[1;30m'
 PRP='\u001b[0;35m'
 NC='\u001b[0m'
 
+# Configurations
+show_session_end="N"
+
+while read line; do
+	if [[ $line == *"show_session_end: true"* ]]
+	then
+		show_session_end="Y"
+	fi
+done <"./.dsc.config"
+
 if [[ $FILE == *".dsc"* ]]
 then
 while read line; do
@@ -510,4 +520,9 @@ while read line; do
         echo -e "${PRP}$line${NC}"
     fi
 done <$FILE
+fi
+
+if [[ $show_session_end == "Y" ]]
+then
+	echo "SESSION END"
 fi
