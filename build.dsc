@@ -8,9 +8,3 @@ shell:
     - ./src/dsc/dsc.krabb src/dsc/tests.dsc
 ;
 
-build:
-    - compile src/editor/main.c
-
-shell:
-    - mv a.out build/krabbeditor
-;

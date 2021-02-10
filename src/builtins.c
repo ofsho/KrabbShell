@@ -84,10 +84,10 @@ int krabbsh_dir(char **args)
 {
     timesdir+=1;
     if (timesdir %2 == 0){
-        directory = false;
+        directory = 0;
     }
     else{
-        directory = true;
+        directory = 1;
     }
     return 1;
 }

@@ -25,14 +25,14 @@ CRPP="N"
 HIPP="N"
 
 # colors
-RED='\033[0;31m'
-GRN='\033[0;32m'
-YLO='\033[1;33m'
-CYN='\033[0;36m'
-BLU='\033[0;34m'
-GRA='\033[1;30m'
-PRP='\033[0;35m'
-NC='\033[0m'
+RED='\u001b[0;31m'
+GRN='\u001b[0;32m'
+YLO='\u001b[1;33m'
+CYN='\u001b[0;36m'
+BLU='\u001b[0;34m'
+GRA='\u001b[1;30m'
+PRP='\u001b[0;35m'
+NC='\u001b[0m'
 
 if [[ $FILE == *".dsc"* ]]
 then
@@ -158,12 +158,12 @@ while read line; do
         fi
         if [[ $line == *"-"* ]]
         then
-            echo "${RED}ERR${NC} - ${RED}Cant have a task and a list in the same line${NC}"
+            echo -e "${RED}ERR${NC} - ${RED}Cant have a task and a list in the same line${NC}"
             ERRCOUNT+=1
             ERPP="Y" 
         elif [[ $line == *"  "* ]]
         then
-            echo "${RED}ERR${NC} - ${RED}Cant have a tab and a list in the same line${NC}"
+            echo -e "${RED}ERR${NC} - ${RED}Cant have a tab and a list in the same line${NC}"
             ERRCOUNT+=1
             ERPP="Y" 
         else
@@ -245,7 +245,7 @@ while read line; do
                         then
                             export one="false"
                         else
-                            echo "${PRP}$line${NC}"
+                            echo -e "${PRP}$line${NC}"
                         fi
                     else
                         echo ""
@@ -406,7 +406,7 @@ while read line; do
                 $value
             done
         else
-            echo "${RED}ERR${NC} - ${RED}Command not found${NC}"
+            echo -e "${RED}ERR${NC} - ${RED}Command not found${NC}"
             ERRCOUNT+=1
             ERPP="Y" 
         fi
@@ -437,17 +437,17 @@ while read line; do
         then
             line=${line/brief= /}
             line=${line//# @}
-            echo "${CYN}breif: ${BLU}$line${NC}"
+            echo -e "${CYN}breif: ${BLU}$line${NC}"
         elif [[ $line == *@desc=* ]]
         then
             line=${line/desc= /}
             line=${line//# @}
-            echo "${CYN}description: ${BLU}$line${NC}"
+            echo -e "${CYN}description: ${BLU}$line${NC}"
         elif [[ $line == *@command=* ]]
         then
             line=${line/command= /}
             line=${line//# @}
-            echo "${CYN}command: ${BLU}$line${NC}"
+            echo -e "${CYN}command: ${BLU}$line${NC}"
         fi
     elif [[ $line == *".gtw"* ]]
     then
@@ -467,7 +467,7 @@ while read line; do
         line=${line/file= /}
         export file=$line
     else
-        echo "${RED}ERR${NC} - ${RED}Command not found${NC}"
+        echo -e "${RED}ERR${NC} - ${RED}Command not found${NC}"
         ERRCOUNT+=1
         ERPP="Y" 
     fi
@@ -479,21 +479,21 @@ while read line; do
 
     if [ $ERPP == "Y" ]
     then
-        echo "${RED}$line${NC}"
+        echo -e "${RED}$line${NC}"
     elif [ $WRPP == "Y" ]
     then
-        echo "${YLO}$line${NC}"
+        echo -e "${YLO}$line${NC}"
         WRPP="N"
     elif [ $HIPP == "Y" ]
     then
         HIPP="N"
     else
-        echo "${GRN}$line${NC}"
+        echo -e "${GRN}$line${NC}"
     fi
 done <$FILE
 
 TRUCOUNT=$LSTCOUNT+$TSKCOUNT
-echo "\n\n--------------------------------------------------------------------------------\n\nYou have:\n ${TRUCOUNT} ${GRN}Completed${NC}\n ${WRNCOUNT} ${YLO}Warnings${NC}\n ${ERRCOUNT} ${RED}Errors${NC}\nYou have overall:\n ${TSKCOUNT} ${CYN}Tasks${NC}\n ${LSTCOUNT} ${BLU}Lists${NC}\n ${COMCOUNT} ${BLU}Comments${NC}\n ${STSCOUNT} ${CYN}Subtasks${NC}\n ${SKLCOUNT} ${GRA}Skipped Lines${NC}"
+echo -e "\n\n--------------------------------------------------------------------------------\n\nYou have:\n ${TRUCOUNT} ${GRN}Completed${NC}\n ${WRNCOUNT} ${YLO}Warnings${NC}\n ${ERRCOUNT} ${RED}Errors${NC}\nYou have overall:\n ${TSKCOUNT} ${CYN}Tasks${NC}\n ${LSTCOUNT} ${BLU}Lists${NC}\n ${COMCOUNT} ${BLU}Comments${NC}\n ${STSCOUNT} ${CYN}Subtasks${NC}\n ${SKLCOUNT} ${GRA}Skipped Lines${NC}"
 
 
 elif [[ $FILE == *".mdx"* ]]
@@ -503,11 +503,11 @@ while read line; do
     then
         export now="true"
     else
-        echo "${RED}error in file${RED}"
+        echo -e "${RED}error in file${RED}"
     fi
     if [ $now == "true" ]
     then
-        echo "${PRP}$line${NC}"
+        echo -e "${PRP}$line${NC}"
     fi
 done <$FILE
 fi

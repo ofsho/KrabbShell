@@ -27,7 +27,7 @@ void krabbsh_loop(void)
 
   do {
     timeis++;
-    if(directory == true){
+    if(directory == 1){
         char cwd[PATH_MAX];
         if (getcwd(cwd, sizeof(cwd)) != NULL) {
             printf("%s ", cwd);
@@ -66,7 +66,7 @@ void krabbsh_loop(void)
     line = krabbsh_read_line();
     args = krabbsh_split_line(line);
 
-    if (bl == false){
+    if (bl == 0){
         if (strchr(line, '#') == NULL)
         {
             write_to_history(*args);
