@@ -7,4 +7,4 @@ KrabbShell is a simple, open source Shell.
 </div>
 
 ## Building
-To build krabb please go to `CONTRIBUTING.MD`
+The build instructions are at `CONTRIBUTING.MD`
