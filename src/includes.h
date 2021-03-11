@@ -1,5 +1,4 @@
 #include <assert.h>
-#include <CoreText/CoreText.h>
 #include <ctype.h>
 #include <dirent.h>
 #include <errno.h>
@@ -24,10 +23,10 @@ const int key_up = 72;
 const int key_down = 80;
 const int key_left = 75;
 const int key_right = 77;
-bool bl = false;
+int bl = 0;
 char errwrning = 'n';
 int iii = 0;
-bool directory = false;
+int directory = 0;
 int timesdir = 0;
 int timeis = 0;
 
