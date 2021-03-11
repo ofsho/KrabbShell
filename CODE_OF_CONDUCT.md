@@ -12,6 +12,6 @@
   - Use [singular they](https://en.wikipedia.org/wiki/Singular_they) when talking to people
 
 If you want to contact me by mail so please add:
-  - Name (github username and/or real name)
-  - Subject must be "krabbshell issue"
+  - Name (github username and/not real name)
+  - Subject must be `krabbshell issue`
   - The body must include the issue and your suggested fix (if you have a suggested fix for the issue)
