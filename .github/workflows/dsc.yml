@@ -31,3 +31,6 @@ jobs:
       
       - name: Run gcc
         run: gcc src/main.c
+      
+      - name: execute a.out
+        run: ./a.out
