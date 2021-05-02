@@ -1,6 +1,6 @@
 # KrabbShell
 <div class="cl_">
-KrabbShell: a simple, open source Shell.
+KrabbShell: a simple, open source Shell.<br>
 </div>
 <div class="cl">
 <img src="./docs/assets/krabb_logo.jpg" style="height: 200px">
